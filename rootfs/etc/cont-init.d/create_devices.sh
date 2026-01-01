@@ -71,7 +71,7 @@ for device in $(bashio::config 'devices|keys'); do
     # Attach the device
     bashio::log.debug "Attaching device ${bus_id} from server ${server_address}."
     echo "/usr/sbin/usbip attach --remote=${server_address} --busid=${bus_id}" >>"${mount_script}"
-    #echo "lsusb" >>"${mount_script}"
+    echo "sleep 15; lsusb" >>"${mount_script}"
 done
 
 bashio::log.info "Device configuration complete. Ready to attach devices."
