@@ -5,6 +5,8 @@ bashio::log.level "$(bashio::config 'log_level')"
 
 # Logging before attempting to load the kernel module
 bashio::log.info "Attempting to load vhci-hcd kernel module..."
+/sbin/rmmod vhci-hcd || true
+
 if /sbin/modprobe vhci-hcd; then
     bashio::log.info "Successfully loaded vhci-hcd module."
     bashio::log.debug "Kernel modules currently loaded: $(lsmod | grep vhci)"
