@@ -1,4 +1,4 @@
-name: "HA USB/IP Client"
+name: "HA USB/IP Client ddimension Fork"
 description: "A USB/IP client to connect to an existing USB/IP server and access remote USB devices."
 version: "0.1.4"
 slug: "ha_usbip_client"
